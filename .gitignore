@@ -14,5 +14,9 @@
 #Log files
 *.log
 
+#Database files
+*.sqlite
+*.db
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
