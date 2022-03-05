@@ -23,7 +23,7 @@ func New(repo repository.VideoRepository) VideoService {
 }
 
 func (service *videoService) Save(video entity.Video) entity.Video {
-	service.videoRepository.Save(video)
+	go service.videoRepository.Save(video)
 	return video
 }
 

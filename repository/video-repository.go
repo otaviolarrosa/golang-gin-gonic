@@ -42,7 +42,7 @@ func (db *database) Save(video entity.Video) {
 	db.connection.Create(&video)
 }
 func (db *database) Update(video entity.Video) {
-	db.connection.Save(&video)
+	go db.connection.Save(&video)
 }
 
 func (db *database) Delete(video entity.Video) {

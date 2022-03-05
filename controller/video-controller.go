@@ -47,7 +47,7 @@ func (c *controller) Save(ctx *gin.Context) error {
 		return err
 	}
 
-	c.service.Save(video)
+	go c.service.Save(video)
 	return nil
 }
 
